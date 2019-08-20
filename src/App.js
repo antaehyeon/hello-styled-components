@@ -9,6 +9,10 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const Card = styled.div`
+  background-color: red;
+`;
+
 const Container = styled.div`
   height: 100vh;
   width: 100%;
@@ -16,10 +20,9 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #ecf0f1;
-`;
-
-const Card = styled.div`
-  background-color: red;
+  ${Card} {
+    background-color: green;
+  }
 `;
 
 const Button = styled.button`
