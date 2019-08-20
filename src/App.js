@@ -1,13 +1,19 @@
-import React from "react";
+import React, { Fragment } from "react";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>STYLED COMPONENTS</p>
-      </header>
-    </div>
+    <Fragment>
+      {/* <button className="button button--success">SUCCESS</button>
+      <button className="button button--danger">DANGER</button> */}
+      <Button danger />
+      <Button />
+    </Fragment>
   );
-}
+};
+
+const Button = ({ danger = false }) => (
+  <button className={danger ? "button button--danger" : "button button--success"}>{danger ? "DANGER" : "SUCCESS"}</button>
+);
 
 export default App;
